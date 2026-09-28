@@ -24,6 +24,32 @@ h1 {
   margin-bottom: 20px;
 }
 
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-row h1 {
+  margin-bottom: 0;
+  font-size: 22px;
+}
+
+#aboutBtn {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#aboutBtn:hover {
+  background-color: #f0f0f0;
+}
+
 .input-area {
   display: flex;
   gap: 8px;
@@ -159,4 +185,64 @@ li.completed span.task-text {
   color: #aaa;
   padding: 10px 0;
   font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-content .author {
+  margin-top: 15px;
+  font-style: italic;
+  color: #888;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #333;
 }

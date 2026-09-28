@@ -9,7 +9,10 @@
 <body>
 
   <div class="container">
-    <h1>My To-Do List</h1>
+    <div class="header-row">
+      <h1>My To-Do List</h1>
+      <button id="aboutBtn" title="About this app">ℹ️ About</button>
+    </div>
 
     <div class="input-area">
       <input type="text" id="taskInput" placeholder="Add a new task...">
@@ -27,6 +30,16 @@
     <div class="footer">
       <span id="taskCount">0 tasks left</span>
       <button id="clearCompletedBtn">Clear Completed</button>
+    </div>
+  </div>
+
+  <div id="aboutModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeAboutBtn" class="close-btn">&times;</button>
+      <h2>About This App</h2>
+      <p><strong>My To-Do List</strong> is a simple task manager built with HTML, CSS, and JavaScript.</p>
+      <p>Add tasks, mark them complete, edit them inline, filter by status, and clear finished items. Everything is saved locally in your browser, so your list persists after a refresh.</p>
+      <p class="author">Created by Prince Jameel G. Doble</p>
     </div>
   </div>
 

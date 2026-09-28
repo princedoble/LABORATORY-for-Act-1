@@ -171,5 +171,31 @@ filterBtns.forEach(btn => {
   });
 });
 
+// ---------- About Modal ----------
+const aboutBtn = document.getElementById("aboutBtn");
+const aboutModal = document.getElementById("aboutModal");
+const closeAboutBtn = document.getElementById("closeAboutBtn");
+
+function openAbout() {
+  aboutModal.classList.remove("hidden");
+}
+
+function closeAbout() {
+  aboutModal.classList.add("hidden");
+}
+
+aboutBtn.addEventListener("click", openAbout);
+closeAboutBtn.addEventListener("click", closeAbout);
+
+aboutModal.addEventListener("click", (e) => {
+  if (e.target === aboutModal) closeAbout();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !aboutModal.classList.contains("hidden")) {
+    closeAbout();
+  }
+});
+
 // Initial render on page load
 render();
